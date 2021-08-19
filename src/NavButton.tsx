@@ -1,12 +1,11 @@
 export interface Props {
-    label: string;
+    name: string,
+    path: string;
 }
 
 const NavButton: React.FC<Props> = (props) => {
     return (
-        <div>
-            <p>{ props.label }</p>
-        </div>
+            <a href={props.path}>{ props.name }</a>
     );
 }
 
