@@ -1,21 +1,32 @@
 import CollapseList from "./CollapseList";
 export interface Props {
     title: string,
-    items: string[];
+    items?: string[];
+    paragraphs?: string[];
 }
 
 
-const PageSection: React.FC<Props> = (props) => {
+const PageSection: React.FC<Props> = ({title, items = [], paragraphs= []}) => {
 
-    // const items = props.items.map((item) => {
-    //     return (
-    //         {item}
-    //     )
-    // });
+    let listItems;
+    if ( items.length ) {
+        listItems = (
+            <CollapseList items={items} title={title}>
+            </CollapseList>
+        );
+    };
+    let p;
+    if (paragraphs.length) {
+        p = paragraphs.map((para, index) => {
+            return (
+                <p key={index}>{para}</p>
+            )
+        });
+    };
     return (
         <section>
-            <CollapseList items={props.items} title={props.title}>
-            </CollapseList>
+            {listItems}
+            {p}
         </section>
     );
 }

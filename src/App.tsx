@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import PageSection from './PageSection';
-import AboutPage from './AboutPage';
+import AboutPage from './pages/AboutPage';
 import './App.css';
 
 const links = [

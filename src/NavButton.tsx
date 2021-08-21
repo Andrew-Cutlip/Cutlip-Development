@@ -5,7 +5,9 @@ export interface Props {
 
 const NavButton: React.FC<Props> = (props) => {
     return (
-            <a href={props.path}>{ props.name }</a>
+        <li  className="navButton">
+            <a href={props.path}>{props.name}</a>
+        </li>
     );
 }
 

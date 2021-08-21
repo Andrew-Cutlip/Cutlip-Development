@@ -9,9 +9,9 @@ export interface Props {
 const CollapseList: React.FC<Props> = (props) => {
 
     const [hidden, setHidden] = useState(false);
-    const items = props.items.map((item) => {
+    const items = props.items.map((item, index) => {
         return (
-            <li>{item}</li>
+            <li key={index}>{item}</li>
         )
     });
     let list;

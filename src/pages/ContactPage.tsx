@@ -1,4 +1,4 @@
-import PageSection from "./PageSection";
+import PageSection from "../PageSection";
 
 const bio = {
     name: "Bio",
@@ -30,7 +30,7 @@ let sections = sectionsList.map((section) => {
     )
 });
 
-const AboutPage: React.FC = () => {
+const ContactPage: React.FC = () => {
     return (
         <main>
             {sections}
@@ -38,4 +38,4 @@ const AboutPage: React.FC = () => {
     );
 }
 
-export default AboutPage;
+export default ContactPage;

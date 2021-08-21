@@ -17,11 +17,16 @@ const Card: React.FC<Props> = (props) => {
     if (! props.subtitle === undefined) {
         sub = <h3>{ props.subtitle }</h3>
     };
+    let link;
+    if (! (props.link === undefined || props.linkTitle === undefined) ) {
+        link = <a href={props.link}>{ props.linkTitle }</a>
+    };
     return (
         <div className="Card">
             {title}
             {text}
             {sub}
+            {link}
         </div>
     );
 }
