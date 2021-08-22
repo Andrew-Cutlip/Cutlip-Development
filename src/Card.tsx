@@ -7,14 +7,12 @@ export interface Props {
 };
 
 const Card: React.FC<Props> = (props) => {
-    const title = () => {
-        <h2>{ props.title }</h2>
-    };
-    const text = () => {
-        <p>{ props.text }</p>
-    }
+    const title =
+        <h2>{ props.title }</h2>;
+    const text =
+        <p>{props.text}</p>;
     let sub;
-    if (! props.subtitle === undefined) {
+    if (! (props.subtitle === undefined)) {
         sub = <h3>{ props.subtitle }</h3>
     };
     let link;
@@ -24,8 +22,8 @@ const Card: React.FC<Props> = (props) => {
     return (
         <div className="Card">
             {title}
-            {text}
             {sub}
+            {text}
             {link}
         </div>
     );

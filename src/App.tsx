@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import Header from './Header';
-import PageSection from './PageSection';
 import PageContainer from './PageContainer';
+import Footer from './Footer';
 import './App.css';
 
 const links = [
@@ -42,6 +42,7 @@ function App() {
     <div className="App">
       <Header links={links} onClick={ changePage }></Header>
       <PageContainer page={page}></PageContainer>
+      <Footer name="Cutlip Development"></Footer>
     </div>
   );
 }
