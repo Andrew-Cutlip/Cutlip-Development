@@ -1,6 +1,7 @@
 import NavButton from "./NavButton";
 export interface Props {
     links: Array<Links>;
+    onClick: Function;
 }
 
 export interface Links {
@@ -12,7 +13,7 @@ const Nav: React.FC<Props> = (props) => {
 
     const links = props.links.map((link, index) => {
         return (
-            <NavButton name={link.name} path={link.name} key={index}>
+            <NavButton name={link.name} path={link.path} key={index} onClick={(val: string) => props.onClick(val)}>
             </NavButton>
     )});
     return (

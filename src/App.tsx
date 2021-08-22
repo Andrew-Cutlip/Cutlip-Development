@@ -1,7 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
 import Header from './Header';
 import PageSection from './PageSection';
-import AboutPage from './pages/AboutPage';
+import PageContainer from './PageContainer';
 import './App.css';
 
 const links = [
@@ -27,19 +28,20 @@ const links = [
   }
 ];
 
-const languages = {
-  title: "Languages",
-  items: ["JS", "Python", "C++"]
-}
+
 
 function App() {
+  const [page, setPage] = useState("home");
+
+  const changePage = (page: string) => {
+    console.log(page);
+    setPage(page);
+  }
+
   return (
     <div className="App">
-      <Header links={links}></Header>
-      <PageSection title={languages.title} items={languages.items}>
-
-      </PageSection>
-      <AboutPage></AboutPage>
+      <Header links={links} onClick={ changePage }></Header>
+      <PageContainer page={page}></PageContainer>
     </div>
   );
 }
