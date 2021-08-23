@@ -20,9 +20,7 @@ const CollapseList: React.FC<Props> = (props) => {
     }
     return (
         <div className="collapse">
-            <button onClick={() => setHidden(! hidden)}>
-                <h2 >{props.title}</h2>
-            </button>
+                <h2 onClick={() => setHidden(! hidden)} className="collapseTab">{props.title}</h2>
             {list}
         </div>
     );

@@ -20,7 +20,7 @@ const Card: React.FC<Props> = (props) => {
         link = <a href={props.link}>{ props.linkTitle }</a>
     };
     return (
-        <div className="Card">
+        <div className="card">
             {title}
             {sub}
             {text}
